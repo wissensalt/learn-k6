@@ -8,7 +8,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Run K6 local test
+      - name: Run K6 test test.js
         uses: k6io/action@v0.1
         with:
           filename: test.js
+      - name: Run K6 test test-with-additional-metrics.js
+        uses: k6io/action@v0.1
+        with:
+          filename: test-with-additional-metrics.js
